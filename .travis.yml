@@ -43,5 +43,10 @@ before_script:
   - java -jar /tmp/selenium-server-standalone.jar > /dev/null &
   - sleep 5
 
+  - whoami
+  - ps aux|grep apache
+  - cat /etc/passwd
+  - ls -l ./templates/compiled/
+  - sleep 5
 
 script: HTTP_APP_ENV=test cd tests/behat/ && php behat.phar --config='../../plugins/usewatermark/tests/behat/behat.yml' --strict
