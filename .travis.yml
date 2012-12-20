@@ -16,6 +16,8 @@ before_script:
   # change application working folders for write access
 
   - mkdir -p ./templates/compiled/synio/
+  - mkdir -p ./uploads/images/
+  - mkdir -p ./uploads/images_original/
   - chmod -R 0777 ./tmp
   - chmod -R 0777 ./uploads
   - chmod -R 0777 ./templates/cache/
