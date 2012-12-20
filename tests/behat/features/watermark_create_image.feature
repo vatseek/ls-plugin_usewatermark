@@ -18,10 +18,12 @@ Feature: Usewatermark plugin standart features BDD
       Then I send event "focus" to element by css "#topic_text"
       When I press "Submit"
 
-      Then I wait "1000"
+      Then I wait "2000"
       Then I press "Publish"
-      Then I wait "1000"
+      Then I wait "2000"
 
+      Given I am on "/blog/3.html"
+      Then I wait "1000"
       Then I check for backup of image
 
   @mink:selenium2
@@ -40,7 +42,10 @@ Feature: Usewatermark plugin standart features BDD
       Then I send event "focus" to element by css "#topic_text"
       When I press "Submit"
 
-      Then I wait "1000"
+      Then I wait "2000"
       Then I press "Publish"
+      Then I wait "2000"
+
+      Given I am on "/blog/3.html"
       Then I wait "1000"
       Then I check the image
