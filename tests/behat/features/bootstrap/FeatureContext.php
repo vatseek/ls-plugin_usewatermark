@@ -126,4 +126,18 @@ class FeatureContext extends MinkContext
     }
 
 
+    /**
+     * @Then /^I debug$/
+     */
+    public function iDebug()
+    {
+        $this->getSession()->executeScript("$('body').html( jQuery('#topic_text').val())");
+
+        $element = $this->getSession()->getPage()->find('css', "body");
+        $content = $element->getHtml();
+
+        echo($content);
+    }
+
+
 }
