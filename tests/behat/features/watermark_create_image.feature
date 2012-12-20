@@ -11,6 +11,8 @@ Feature: Usewatermark plugin standart features BDD
 
       Given I am on "/topic/edit/3"
       Then I wait "1000"
+      Then print last response
+
       Then I send event "mouseup" to element by css ".editor-picture a"
       Then I fill event by css "#form-image-url-title" values "pic"
       When I attach the file "/home/vatseek/web/livestreet.co/plugins/usewatermark/tests/fixtures/image/test3.jpg" to "img_file"
