@@ -125,18 +125,30 @@ class FeatureContext extends MinkContext
         }
     }
 
+    /**
+     * @When /^I put the file "([^"]*)" to "([^"]*)"$/
+     */
+    public function iPutTheFileTo($fileName, $path)
+    {
+        $fullPath = dirname(realpath((dirname(__FILE__)) . "/../../"))  . '/fixtures/image/' . $fileName;
+        $this->attachFileToField($path, $fullPath);
+    }
+
+
 
     /**
      * @Then /^I debug$/
      */
     public function iDebug()
     {
-        $this->getSession()->executeScript("$('body').html( jQuery('#topic_text').val())");
+        /*$this->getSession()->executeScript("$('body').html( jQuery('#topic_text').val())");
 
         $element = $this->getSession()->getPage()->find('css', "body");
         $content = $element->getHtml();
 
-        echo($content);
+        echo($content);*/
+
+        //var_dump($this->getMinkParameter('files_path')); die;
     }
 
 
