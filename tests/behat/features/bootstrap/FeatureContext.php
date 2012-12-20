@@ -107,7 +107,7 @@ class FeatureContext extends MinkContext
         $element = $this->getSession()->getPage()->find('css', "#content");
         $content = $element->getHtml();
 
-        var_dump($content);
+        echo($content);
 
         $pattern = '/<img src=\"http:\/\/livestreet.test\/uploads\/images(\/[0-9]{2}\/[0-9]{2}\/[0-9]{2}\/[0-9]{4}\/[0-9]{2}\/[0-9]{2}\/.*\.jpg)\">/';
         if (!preg_match_all($pattern, $content, $matches)) {
