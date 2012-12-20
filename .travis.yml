@@ -53,5 +53,12 @@ script: HTTP_APP_ENV=test cd tests/behat/ && php behat.phar --config='../../plug
 
 
 after_script:
-  - ls -la ../../uploads/
-  - pwd
+  - cd ../../
+  - ls -la ./uploads/
+  - ls -la ./uploads/images/
+  - ls -la ./uploads/images/00/
+  - ls -la ./uploads/images/00/00/
+  - ls -la ./uploads/images/00/00/01
+  - ls -la ./uploads/images/00/00/01/2012/
+  - ls -la ./uploads/images/00/00/01/2012/12/
+  - ls -la ./uploads/images/00/00/01/2012/12/20/
