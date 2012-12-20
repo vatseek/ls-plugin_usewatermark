@@ -18,9 +18,7 @@ Feature: Usewatermark plugin standart features BDD
       Then I send event "focus" to element by css "#topic_text"
       When I press "Submit"
 
-    Then I wait "1000"
-    Then I debug
-    Then I wait "2000"
+      Then I wait "2000"
       Then I press "Publish"
       Then I wait "2000"
 
@@ -43,11 +41,6 @@ Feature: Usewatermark plugin standart features BDD
       When I put the file "test3.jpg" to "img_file"
       Then I send event "focus" to element by css "#topic_text"
       When I press "Submit"
-
-
-    Then I debug
-    Then I wait "2000"
-
 
       Then I wait "2000"
       Then I press "Publish"

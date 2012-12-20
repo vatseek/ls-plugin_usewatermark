@@ -5,7 +5,6 @@ php:
 
 before_script:
   - export DISPLAY=:99
-  - pwd
   - mkdir -p /tmp/plugins/usewatermark
   - mv * /tmp/plugins/usewatermark
   - mkdir /tmp/ls && git clone git://github.com/stfalcon-studio/livestreet.git /tmp/ls
@@ -17,14 +16,6 @@ before_script:
   # change application working folders for write access
 
   - mkdir -p ./templates/compiled/synio/
-
-  - mkdir -p ./uploads/images/
-  - mkdir -p ./uploads/images/00/
-  - mkdir -p ./uploads/images/00/00/
-  - mkdir -p ./uploads/images/00/00/01
-  - mkdir -p ./uploads/images/00/00/01/2012/
-  - mkdir -p ./uploads/images/00/00/01/2012/12/
-  - mkdir -p ./uploads/images/00/00/01/2012/12/20/
 
   - chmod -R 0777 ./tmp
   - chmod -R 0777 ./uploads

@@ -133,23 +133,4 @@ class FeatureContext extends MinkContext
         $fullPath = dirname(realpath((dirname(__FILE__)) . "/../../"))  . '/fixtures/image/' . $fileName;
         $this->attachFileToField($path, $fullPath);
     }
-
-
-
-    /**
-     * @Then /^I debug$/
-     */
-    public function iDebug()
-    {
-        /*$this->getSession()->executeScript("$('body').html( jQuery('#topic_text').val())");
-
-        $element = $this->getSession()->getPage()->find('css', "body");
-        $content = $element->getHtml();
-
-        echo($content);*/
-
-        //var_dump($this->getMinkParameter('files_path')); die;
-    }
-
-
 }
